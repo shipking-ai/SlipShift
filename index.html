@@ -1054,7 +1054,7 @@ window.addEventListener('keyup', function(e){ keys[e.code]=false; });
 function pollInput(){
   var left = keys['KeyA']||keys['ArrowLeft']||touchState.left;
   var right = keys['KeyD']||keys['ArrowRight']||touchState.right;
-  input.steer = (left?-1:0)+(right?1:0);
+  input.steer = (left?1:0)+(right?-1:0);
   input.throttle = (keys['KeyW']||keys['ArrowUp']||touchState.gas)?1:0;
   input.brake = (keys['KeyS']||keys['ArrowDown']||touchState.brake)?1:0;
   input.drift = !!(keys['Space']||touchState.drift);
